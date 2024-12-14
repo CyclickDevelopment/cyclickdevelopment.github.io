@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello World - C</title>
+    <link rel="stylesheet" href="/assets/built/screen.css?v=197158c623">
+
+    <meta name="description" content="C was the first language we worked with at University. Thinking back to those days of studying examples Ivor Horton&#x27;s Beginning C, we take a walk down memory lane with this &#x27;Hello World&#x27;.">
+    <link rel="icon" href="http://192.168.20.35:2369/content/images/size/w256h256/2023/09/cyclick-development-logo-sq.png" type="image/png">
+    <link rel="canonical" href="http://192.168.20.35:2369/hello-world-c/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Cyclick Development">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Hello World - C">
+    <meta property="og:description" content="C was the first language we worked with at University. Thinking back to those days of studying examples Ivor Horton&#x27;s Beginning C, we take a walk down memory lane with this &#x27;Hello World&#x27;.">
+    <meta property="og:url" content="http://192.168.20.35:2369/hello-world-c/">
+    <meta property="og:image" content="http://192.168.20.35:2369/content/images/2023/06/hello-world-c-example.jpg.png">
+    <meta property="article:published_time" content="2023-06-17T18:16:06.000Z">
+    <meta property="article:modified_time" content="2023-06-17T18:29:12.000Z">
+    <meta property="article:tag" content="Programming Language Examples">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hello World - C">
+    <meta name="twitter:description" content="C was the first language we worked with at University. Thinking back to those days of studying examples Ivor Horton&#x27;s Beginning C, we take a walk down memory lane with this &#x27;Hello World&#x27;.">
+    <meta name="twitter:url" content="http://192.168.20.35:2369/hello-world-c/">
+    <meta name="twitter:image" content="http://192.168.20.35:2369/content/images/2023/06/hello-world-c-example.jpg.png">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Pete Washer">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Programming Language Examples">
+    <meta property="og:image:width" content="989">
+    <meta property="og:image:height" content="522">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Cyclick Development",
+        "url": "http://192.168.20.35:2369/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://192.168.20.35:2369/content/images/2023/08/cyclick-development-logo-gh-1.png"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Pete Washer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://192.168.20.35:2369/content/images/2023/06/pete-washer-cyclick-development.jpg",
+            "width": 460,
+            "height": 460
+        },
+        "url": "http://192.168.20.35:2369/author/pete/",
+        "sameAs": []
+    },
+    "headline": "Hello World - C",
+    "url": "http://192.168.20.35:2369/hello-world-c/",
+    "datePublished": "2023-06-17T18:16:06.000Z",
+    "dateModified": "2023-06-17T18:29:12.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://192.168.20.35:2369/content/images/2023/06/hello-world-c-example.jpg.png",
+        "width": 989,
+        "height": 522
+    },
+    "keywords": "Programming Language Examples",
+    "description": "C was the first language we worked with at University. Thinking back to those days of studying examples Ivor Horton&#x27;s Beginning C, we take a walk down memory lane with this &#x27;Hello World&#x27;.",
+    "mainEntityOfPage": "http://192.168.20.35:2369/hello-world-c/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.101">
+    <link rel="alternate" type="application/rss+xml" title="Cyclick Development" href="http://192.168.20.35:2369/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/sodo-search.min.js" data-key="1715529cfb4d1036b542ba24ce" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/main.css" data-sodo-search="http://192.168.20.35:2369/" data-locale="en" crossorigin="anonymous"></script>
+    
+    <link href="http://192.168.20.35:2369/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=197158c623"></script><style>:root {--ghost-accent-color: #00f0f0;}</style>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=197158c623">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FST3F5WTFW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FST3F5WTFW');
+</script>
+
+<meta name="seobility" content="c9a1d84008cdc6c7d51011b14427cc41">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/xqkvbazo",
+    title: "Hello, how can we help?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "What's on your mind?",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
+</head>
+
+<body class="post-template tag-language-examples is-head-left-logo has-serif-body is-head-brand">
+<div class="gh-site">
+
+    <header id="gh-head" class="gh-head gh-outer">
+        <div class="gh-head-inner gh-inner">
+            <div class="gh-head-brand">
+                <div class="gh-head-brand-wrapper">
+                    
+                    <a class="gh-head-logo" href="http://192.168.20.35:2369">
+                            <img src="http://192.168.20.35:2369/content/images/2023/08/cyclick-development-logo-gh-1.png" alt="Cyclick Development">
+                    </a>
+                    
+                </div>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-who"><a href="http://192.168.20.35:2369/cyclick-development/">Who</a></li>
+    <li class="nav-cv"><a href="http://192.168.20.35:2369/cv/">CV</a></li>
+    <li class="nav-services"><a href="http://192.168.20.35:2369/embedded-software-development-services/">Services</a></li>
+    <li class="nav-contact"><a href="http://192.168.20.35:2369/contact/">Contact</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+            </div>
+        </div>
+    </header>
+
+    
+<main class="gh-main">
+        <article class="gh-article post tag-language-examples">
+
+            <header class="gh-article-header gh-canvas">
+                    <a class="gh-article-tag" href="http://192.168.20.35:2369/tag/language-examples/">Programming Language Examples</a>
+
+                <h1 class="gh-article-title">Hello World - C</h1>
+
+                    <aside class="gh-article-sidebar">
+
+        <div class="gh-author-image-list">
+                <a class="gh-author-image" href="/author/pete/">
+                        <img src="http://192.168.20.35:2369/content/images/2023/06/pete-washer-cyclick-development.jpg" alt="Pete Washer">
+                </a>
+        </div>
+
+        <div class="gh-author-name-list">
+                <h4 class="gh-author-name">
+                    <a href="/author/pete/">Pete Washer</a>
+                </h4>
+                
+        </div>
+
+        <div class="gh-article-meta">
+            <div class="gh-article-meta-inner">
+                <time class="gh-article-date" datetime="2023-06-17">Jun 17, 2023</time>
+                    <span class="gh-article-meta-sep"></span>
+                    <span class="gh-article-length">1 min</span>
+            </div>
+        </div>
+
+    </aside>
+
+                    <p class="gh-article-excerpt">C was the first language we worked with at University. Thinking back to those days of studying examples Ivor Horton&#x27;s Beginning C, we take a walk down memory lane with this &#x27;Hello World&#x27;.</p>
+
+                    <figure class="gh-article-image">
+        <img
+            srcset="/content/images/size/w300/2023/06/hello-world-c-example.jpg.png 300w,
+                    /content/images/size/w720/2023/06/hello-world-c-example.jpg.png 720w,
+                    /content/images/size/w960/2023/06/hello-world-c-example.jpg.png 960w,
+                    /content/images/size/w1200/2023/06/hello-world-c-example.jpg.png 1200w,
+                    /content/images/size/w2000/2023/06/hello-world-c-example.jpg.png 2000w"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            src="/content/images/size/w1200/2023/06/hello-world-c-example.jpg.png"
+            alt="Hello World - C"
+        >
+    </figure>
+            </header>
+
+            <section class="gh-content gh-canvas">
+                <h2 id="what-is-c">What is C?</h2><p>Let's start with the basics (at least for us - everyone has their first programming language), and for me that was <code>C</code>!</p><!--kg-card-begin: markdown--><blockquote>
+<p><strong>C</strong> (pronounced /ˈsiː/ – like the letter c)[6] is a general-purpose computer programming language. It was created in the 1970s by Dennis Ritchie, and remains very widely used and influential. By design, C's features cleanly reflect the capabilities of the targeted CPUs. It has found lasting use in operating systems, device drivers and protocol stacks. C is commonly used on computer architectures that range from the largest supercomputers to the smallest microcontrollers and embedded systems.</p>
+</blockquote>
+<!--kg-card-end: markdown--><h2 id="how-do-we-speak-c">How do we speak C?</h2><pre><code class="language-c">#include &lt;stdio.h&gt;
+int main void()
+{
+   printf("Hello world!");
+   return 0;
+}</code></pre>
+            </section>
+
+        </article>
+
+                <div class="gh-read-next gh-canvas">
+                <section class="gh-pagehead">
+                    <h4 class="gh-pagehead-title">Read next</h4>
+                </section>
+
+                <div class="gh-topic gh-topic-grid">
+                    <div class="gh-topic-content">
+                            <article class="gh-card post">
+    <a class="gh-card-link" href="/hello-world-bbc-basic/">
+            <figure class="gh-card-image">
+                <img
+                    srcset="/content/images/size/w300/2023/08/BBC_Micro_Front_Restored.jpg 300w,
+                            /content/images/size/w720/2023/08/BBC_Micro_Front_Restored.jpg 720w,
+                            /content/images/size/w960/2023/08/BBC_Micro_Front_Restored.jpg 960w,
+                            /content/images/size/w1200/2023/08/BBC_Micro_Front_Restored.jpg 1200w,
+                            /content/images/size/w2000/2023/08/BBC_Micro_Front_Restored.jpg 2000w"
+                    sizes="(max-width: 1200px) 100vw, 1200px"
+                    src="/content/images/size/w720/2023/08/BBC_Micro_Front_Restored.jpg"
+                    alt="This is the BBC Micro, which runs BBC Basic"
+                >
+            </figure>
+
+        <div class="gh-card-wrapper">
+            <header class="gh-card-header">
+                <h3 class="gh-card-title">Hello World - BBC Basic</h3>
+            </header>
+
+                    <div class="gh-card-excerpt">BBC Basic was created for the BBC Micro computer in 1981. This home computer was also used in schools. Learn how to say Hello World!</div>
+
+            <footer class="gh-card-footer">
+                <span class="gh-card-author">Pete Washer</span>
+                <time class="gh-card-date" datetime="2023-08-30">Aug 30, 2023</time>
+            </footer>
+        </div>
+    </a>
+</article>                            <article class="gh-card post">
+    <a class="gh-card-link" href="/hello-world-python/">
+            <figure class="gh-card-image">
+                <img
+                    srcset="/content/images/size/w300/2023/06/hello-world-python-cyclick-development.png 300w,
+                            /content/images/size/w720/2023/06/hello-world-python-cyclick-development.png 720w,
+                            /content/images/size/w960/2023/06/hello-world-python-cyclick-development.png 960w,
+                            /content/images/size/w1200/2023/06/hello-world-python-cyclick-development.png 1200w,
+                            /content/images/size/w2000/2023/06/hello-world-python-cyclick-development.png 2000w"
+                    sizes="(max-width: 1200px) 100vw, 1200px"
+                    src="/content/images/size/w720/2023/06/hello-world-python-cyclick-development.png"
+                    alt="Hello World - Python"
+                >
+            </figure>
+
+        <div class="gh-card-wrapper">
+            <header class="gh-card-header">
+                <h3 class="gh-card-title">Hello World - Python</h3>
+            </header>
+
+                    <div class="gh-card-excerpt">Python&#39;s populatiry grows more and more each day. With the Raspberry Pi foundation adopting it as an a language of choice in education settings, that popularity is only set to grow.</div>
+
+            <footer class="gh-card-footer">
+                <span class="gh-card-author">Pete Washer</span>
+                <time class="gh-card-date" datetime="2023-06-17">Jun 17, 2023</time>
+            </footer>
+        </div>
+    </a>
+</article>                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    <footer class="gh-foot gh-outer">
+        <div class="gh-foot-inner gh-inner">
+
+            <nav class="gh-foot-menu">
+                <ul class="nav">
+    <li class="nav-education"><a href="http://192.168.20.35:2369/tag/language-examples/">Education</a></li>
+    <li class="nav-helloworld-series"><a href="http://192.168.20.35:2369/tag/language-examples/">HelloWorld Series</a></li>
+    <li class="nav-continuous-integration-series"><a href="http://192.168.20.35:2369/tag/continuous-integration/">Continuous Integration Series</a></li>
+    <li class="nav-get-in-touch"><a href="http://192.168.20.35:2369/contact/">Get in touch</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-copyright">
+                    Cyclick Development © 2024. Powered by <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/built/main.min.js?v=197158c623"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-fTl/qcO1VgvKtOMApX2PdZzkziyr2stM65GYPLGuYMnuMm1z2JLJG6XVU7C/mR+E7xBUqCivykuhlzfqxXBXbg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>
