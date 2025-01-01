@@ -1,5 +1,5 @@
 User-agent: *
-Sitemap: http://192.168.20.35:2369/sitemap.xml
+Sitemap: https://www.cyclick-development.co.uk/sitemap.xml
 Disallow: /ghost/
 Disallow: /email/
 Disallow: /members/api/comments/counts/
